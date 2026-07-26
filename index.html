@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kanwal ❤️</title>
+
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background: pink;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 10px 25px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Hey Kanwal ❤️</h1>
+<p>Will you do something for me? 😊</p>
+<button onclick="yesClick()">Yes</button>
+<button id="noBtn" ontouchstart="moveNo()">No</button>
+
+<script>
+function yesClick() {
+    document.body.innerHTML = `
+    <h1>🎂 Happy Birthday Kanwal ❤️</h1>
+    <h2>✨ Wishing you a day full of happiness ✨</h2>
+    <p>You are a very special person ❤️</p>
+    <p>May your dreams come true 🌸</p>
+    <p>🎈🎉🎁</p>
+
+<img src="kanwal.jpg" width="250">
+`;
+}
+
+function moveNo() {
+  let button = document.getElementById("noBtn");
+  button.style.position = "absolute";
+  button.style.left = Math.random() * 300 + "px";
+  button.style.top = Math.random() * 300 + "px";
+}
+</script>
+
+</body>
+</html>
