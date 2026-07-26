@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kanwal ❤️ Birthday Surprise</title>
+
+<style>
+
+body{
+    text-align:center;
+    font-family:Arial,sans-serif;
+    background:pink;
+    padding-top:70px;
+    overflow-x:hidden;
+}
+
+h1{
+    font-size:40px;
+}
+
+h2{
+    font-size:28px;
+}
+
+button{
+    font-size:20px;
+    padding:12px 25px;
+    margin:10px;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+
+#noBtn{
+    position:relative;
+}
+
+
+.name{
+    font-size:55px;
+    animation:glow 2s infinite;
+}
+
+
+@keyframes glow{
+    50%{
+        transform:scale(1.2);
+    }
+}
+
+
+/* Hearts */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:35px;
+    animation:heartMove 6s linear forwards;
+}
+
+
+@keyframes heartMove{
+
+    to{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+
+}
+
+
+
+/* Balloons */
+
+.balloon{
+    position:fixed;
+    bottom:-100px;
+    font-size:60px;
+    animation:balloonMove 8s linear infinite;
+}
+
+
+@keyframes balloonMove{
+
+    to{
+        transform:translateY(-120vh);
+    }
+
+}
+
+
+
+/* Flowers */
+
+.flower{
+    position:fixed;
+    top:-50px;
+    font-size:40px;
+    animation:flowerMove 7s linear infinite;
+}
+
+
+@keyframes flowerMove{
+
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+
+}
+
+
+
+/* Cake */
+
+.cake{
+    font-size:90px;
+    cursor:pointer;
+    animation:cakeAnim 2s infinite;
+}
+
+
+@keyframes cakeAnim{
+
+    50%{
+        transform:rotate(-10deg) scale(1.1);
+    }
+
+}
+
+
+
+/* Fireworks */
+
+.firework{
+    position:fixed;
+    font-size:70px;
+    animation:boom 1s forwards;
+}
+
+
+@keyframes boom{
+
+    from{
+        transform:scale(0);
+    }
+
+    to{
+        transform:scale(2);
+        opacity:0;
+    }
+
+}
+
+
+.photo{
+    border:8px solid white;
+    border-radius:30px;
+    padding:10px;
+    box-shadow:0 0 20px red;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<h1>🎁 Before Opening Your Birthday Surprise 🎁</h1>
+
+<h2>
+❤️ Kanwal, will you always stay my friend? 😊
+</h2>
+
+
+<button onclick="startPrank()">
+💖 YES
+</button>
+
+
+<button id="noBtn"
+onmouseover="moveNo()"
+ontouchstart="moveNo()">
+❌ NO
+</button>
+
+
+
+<script>
+
+
+function moveNo(){
+
+let b=document.getElementById("noBtn");
+
+b.style.position="absolute";
+
+b.style.left=Math.random()*400+"px";
+
+b.style.top=Math.random()*300+"px";
+
+}
+
+
+
+
+function startPrank(){
+
+document.body.innerHTML=`
+
+<h1>🔍 Friendship Scanner Starting...</h1>
+
+<h2>
+Scanning Kanwal's Friendship Level...
+</h2>
+
+<h1>
+██████████ 100%
+</h1>
+
+
+<h2>
+❤️ Kind Friend Detected ❤️
+</h2>
+
+
+<h1>
+😂 ALERT!
+</h1>
+
+<h2>
+You are officially my best friend forever 🤭
+</h2>
+
+`;
+
+
+setTimeout(hacking,3000);
+
+}
+
+
+
+
+function hacking(){
+
+document.body.innerHTML=`
+
+<h1>
+💻 Connecting To Kanwal's Heart Server...
+</h1>
+
+
+<h2>
+Searching memories...
+</h2>
+
+
+<h2>
+
+❤️ Kindness Found
+
+<br><br>
+
+😂 Happiness Found
+
+<br><br>
+
+✨ Amazing Personality Found
+
+</h2>
+
+
+<h1>
+ACCESS GRANTED ✅
+</h1>
+
+
+<h2>
+Welcome Kanwal 😎
+</h2>
+
+
+`;
+
+
+setTimeout(interview,3000);
+
+}
+
+
+
+
+function interview(){
+
+document.body.innerHTML=`
+
+<h1>
+🎤 Friendship Interview
+</h1>
+
+
+<h2>
+Question:
+<br>
+Who is the sexiest person?
+</h2>
+
+
+<button onclick="contract()">
+A) Kanwal 😎
+</button>
+
+
+<button onclick="contract()">
+B) My Best Friend 😂
+</button>
+
+
+<button onclick="contract()">
+C) Obviously kanwal ❤️
+</button>
+
+
+`;
+
+}
+
+
+
+
+function contract(){
+
+document.body.innerHTML=`
+
+<h1>
+📜 Official Friendship Contract
+</h1>
+
+
+<h2>
+Name: Kanwal ❤️
+</h2>
+
+
+<p style="font-size:25px">
+
+✅ Must talk to me everyday 😊
+
+<br><br>
+
+✅ Must stay naughty ✨
+
+<br><br>
+
+✅ Must make me laugh 🎂
+
+<br><br>
+
+✅ Friendship cannot be cancelled 😂
+
+</p>
+
+
+<h1>
+SIGNED SUCCESSFULLY ❤️
+</h1>
+
+`;
+
+setTimeout(cakeError,3000);
+
+}
+
+
+
+
+
+function cakeError(){
+
+document.body.innerHTML=`
+
+<h1>
+🎂 Loading Birthday Cake...
+</h1>
+
+
+<h1>
+██████████ 100%
+</h1>
+
+
+<h2>
+⚠️ ERROR!
+</h2>
+
+
+<h2>
+Cake failed to load...
+</h2>
+
+
+<h2>
+Reason:
+<br>
+Too much sweetness detected 😂❤️
+</h2>
+
+
+<h1>
+Restarting Celebration...
+</h1>
+
+
+`;
+
+setTimeout(showBirthday,3000);
+
+}
+
+
+
+
+function showBirthday(){
+
+document.body.innerHTML=`
+
+<div id="heartBox"></div>
+
+
+<h1>
+🎉 Surprise Kanwal! 🎉
+</h1>
+
+
+<h1 class="name">
+🎂 Happy Birthday Kanwal ❤️
+</h1>
+
+
+<div style="font-size:70px">
+👧✨
+</div>
+
+
+<h2>
+✨ Wishing you happiness forever ✨
+</h2>
+
+
+<h2>
+🎂 Tap the cake to cut it
+</h2>
+
+
+<div class="cake" onclick="cutCake(this)">
+🎂
+</div>
+
+
+
+<div class="photo">
+
+<img src="Snapchat-1675800939.jpg" width="250">
+
+</div>
+
+
+
+<div class="balloon" style="left:5%">
+🎈
+</div>
+
+<div class="balloon" style="left:25%">
+🎈
+</div>
+
+<div class="balloon" style="left:50%">
+🎈
+</div>
+
+<div class="balloon" style="left:75%">
+🎈
+</div>
+
+
+
+<div class="flower" style="left:20%">
+🌸
+</div>
+
+<div class="flower" style="left:50%">
+🌹
+</div>
+
+<div class="flower" style="left:80%">
+🌺
+</div>
+
+
+
+<h2 style="color:red">
+💌 Special Message 💌
+</h2>
+
+
+<p style="font-size:22px">
+
+Happy Birthday Kanwal ❤️
+
+<br><br>
+
+May Allah bless you with happiness,
+success and endless smiles.
+
+<br><br>
+
+Stay amazing forever 😊
+
+<br><br>
+
+🎂 Happy Birthday 🎉
+
+</p>
+
+
+`;
+
+
+floatingHearts();
+
+}
+
+
+
+
+
+function cutCake(cake){
+
+cake.innerHTML="🍰";
+
+
+for(let i=0;i<10;i++){
+
+setTimeout(()=>{
+
+fireworks();
+
+},i*300);
+
+}
+
+
+document.body.insertAdjacentHTML(
+"beforeend",
+
+`
+
+<h1 style="color:gold">
+🎆 Cake Cut Successfully! 🎆
+</h1>
+
+<h2>
+🎉 Celebration Time Kanwal ❤️
+</h2>
+
+`
+
+);
+
+
+}
+
+
+
+
+function fireworks(){
+
+let f=document.createElement("div");
+
+f.className="firework";
+
+f.innerHTML="🎆";
+
+f.style.left=Math.random()*90+"vw";
+
+f.style.top=Math.random()*80+"vh";
+
+
+document.body.appendChild(f);
+
+
+setTimeout(()=>{
+
+f.remove();
+
+},1000);
+
+
+}
+
+
+
+
+function floatingHearts(){
+
+setInterval(()=>{
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+
+document.body.appendChild(h);
+
+
+setTimeout(()=>{
+
+h.remove();
+
+},6000);
+
+
+},400);
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>
