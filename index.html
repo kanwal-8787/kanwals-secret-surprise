@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Happy 2nd Birthday Orhan ❤️</title>
+
+<style>
+
+body {
+    margin:0;
+    text-align:center;
+    font-family:'Arial',sans-serif;
+    background:linear-gradient(#ffd6e7,#ffffff);
+    overflow-x:hidden;
+}
+
+h1 {
+    color:#e91e63;
+    font-size:42px;
+}
+
+h2 {
+    color:#444;
+}
+
+button {
+    padding:14px 30px;
+    font-size:20px;
+    border:none;
+    border-radius:30px;
+    background:#ff4081;
+    color:white;
+    cursor:pointer;
+    margin:10px;
+}
+
+button:hover {
+    transform:scale(1.1);
+}
+
+
+/* Welcome */
+
+#welcomePage {
+    padding-top:120px;
+}
+
+
+/* Birthday */
+
+#birthdayPage {
+    display:none;
+}
+
+
+/* Gallery */
+
+.gallery {
+    width:320px;
+    height:320px;
+    margin:auto;
+}
+
+.photo {
+    width:320px;
+    height:320px;
+    object-fit:cover;
+    border-radius:25px;
+    display:none;
+}
+
+.photo.active {
+    display:block;
+}
+
+
+/* Cake */
+
+.cake {
+    font-size:100px;
+    animation:bounce 1s infinite;
+    margin:20px;
+}
+
+@keyframes bounce {
+
+50% {
+    transform:translateY(-15px);
+}
+
+}
+
+
+/* Balloon */
+
+.balloon {
+    position:fixed;
+    bottom:-100px;
+    font-size:50px;
+    animation:fly 6s linear infinite;
+}
+
+@keyframes fly {
+
+from {
+bottom:-100px;
+}
+
+to {
+bottom:100%;
+}
+
+}
+
+
+/* Flowers */
+
+.flower {
+    position:fixed;
+    top:-50px;
+    font-size:30px;
+    animation:fall 5s linear infinite;
+}
+
+@keyframes fall {
+
+to {
+top:100%;
+}
+
+}
+
+
+/* Confetti */
+
+.confetti {
+    position:fixed;
+    top:-20px;
+    font-size:25px;
+    animation:drop 4s linear infinite;
+}
+
+@keyframes drop {
+
+to {
+top:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- Welcome Screen -->
+
+<div id="welcomePage">
+
+<h1>🎁 Welcome 🎁</h1>
+
+<h2>A Special Surprise Is Waiting For You 💙</h2>
+
+<p>
+A little angel is turning 2 years old today ✨
+</p>
+
+<button onclick="openBirthday()">
+✨ Open Surprise ✨
+</button>
+
+</div>
+
+
+
+
+<!-- Birthday Page -->
+
+<div id="birthdayPage">
+
+<h1>🎂 Happy 2nd Birthday Orhan 🎂</h1>
+
+<h2>May Allah Bless You Always 💙</h2>
+
+
+<div class="gallery">
+
+<img src="orhan1.jpg" class="photo active">
+<img src="orhan2.jpg" class="photo">
+<img src="orhan3.jpg" class="photo">
+<img src="orhan4.jpg" class="photo">
+<img src="orhan5.jpg" class="photo">
+<img src="orhan6.jpg" class="photo">
+<img src="orhan7.jpg" class="photo">
+
+</div>
+
+
+<div class="cake">
+🎂🕯️🕯️
+</div>
+
+
+<button onclick="blowCandles()">
+🕯️ Blow Candles
+</button>
+
+
+<button onclick="cutCake()">
+🔪 Cut Cake
+</button>
+
+
+<h2 id="message"></h2>
+
+
+</div>
+
+
+
+
+<script>
+
+
+function openBirthday(){
+
+document.getElementById("welcomePage").style.display="none";
+
+document.getElementById("birthdayPage").style.display="block";
+
+createEffects();
+
+}
+
+
+
+
+function blowCandles(){
+
+document.querySelector(".cake").innerHTML="🎂✨";
+
+document.getElementById("message").innerHTML=
+"🎉 Happy Birthday Orhan! May Allah give you happiness, health and success always 💙";
+
+}
+
+
+
+function cutCake(){
+
+document.querySelector(".cake").innerHTML="🎂🔪✨";
+
+document.getElementById("message").innerHTML=
+"🥳 Cake cutting time! Happy 2nd Birthday Orhan 💙";
+
+}
+
+
+
+
+// Slideshow
+
+let photos=document.querySelectorAll(".photo");
+
+let index=0;
+
+
+setInterval(function(){
+
+photos[index].classList.remove("active");
+
+index++;
+
+if(index>=photos.length){
+
+index=0;
+
+}
+
+photos[index].classList.add("active");
+
+
+},2500);
+
+
+
+
+// Effects
+
+function createEffects(){
+
+
+for(let i=0;i<20;i++){
+
+let b=document.createElement("div");
+
+b.className="balloon";
+
+b.innerHTML="🎈";
+
+b.style.left=Math.random()*100+"%";
+
+b.style.animationDelay=Math.random()*5+"s";
+
+document.body.appendChild(b);
+
+}
+
+
+
+for(let i=0;i<25;i++){
+
+let f=document.createElement("div");
+
+f.className="flower";
+
+f.innerHTML="🌸";
+
+f.style.left=Math.random()*100+"%";
+
+f.style.animationDelay=Math.random()*5+"s";
+
+document.body.appendChild(f);
+
+}
+
+
+
+for(let i=0;i<30;i++){
+
+let c=document.createElement("div");
+
+c.className="confetti";
+
+c.innerHTML="🎉";
+
+c.style.left=Math.random()*100+"%";
+
+c.style.animationDelay=Math.random()*5+"s";
+
+document.body.appendChild(c);
+
+}
+
+
+}
+
+
+</script>
+
+
+</body>
+</html>
